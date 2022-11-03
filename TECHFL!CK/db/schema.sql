@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS techuser_db;
+
+CREATE DATABASE techuser_db;
