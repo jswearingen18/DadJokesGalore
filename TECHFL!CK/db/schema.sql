@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS techuser_db;
+DROP DATABASE IF EXISTS jokeuser_db;
 
-CREATE DATABASE techuser_db;
+CREATE DATABASE jokeuser_db;
