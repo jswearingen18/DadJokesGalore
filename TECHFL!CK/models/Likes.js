@@ -1,6 +1,8 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
+class Likes extends Model {}
+
 Likes.init(
   {
     id: {
@@ -8,6 +10,13 @@ Likes.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+    },
+    jokes_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "jokes",
+        key: "id",
+      },
     },
   },
   {
@@ -18,3 +27,5 @@ Likes.init(
     modelName: "likes",
   }
 );
+
+module.exports = Likes;
