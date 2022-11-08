@@ -24,6 +24,8 @@ const sessions = {
   }),
 };
 
+const hbs = exphbs.create({});
+
 app.use(session(sessions));
 
 app.engine('handlebars', hbs.engine);

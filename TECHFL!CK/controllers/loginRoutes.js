@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
     const userJokes = jokeData.map((jokes) => jokes.get({ plain: true }));
 
-    res.render('loginPage', {
+    res.render('login', {
       userJokes,
       logged_in: req.sessions.logged_in,
     });
