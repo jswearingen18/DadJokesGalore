@@ -33,23 +33,19 @@ input[type=text], input[type=password] {
       padding-top: 8%;
   }
   
-  .container {
+  .loginContainer {
       display: block;
       justify-content: center;
       align-items: center;
       border: 2px solid grey;
       border-radius: 5px;
       margin: 0px 20%;
+      padding: 16px;
   }
   
-  .img {
+  .loginImg {
     text-align: center;
     margin: 24px 0 12px 0;
-  }
-  
-  
-  .container {
-    padding: 16px;
   }
   
   .psw {
