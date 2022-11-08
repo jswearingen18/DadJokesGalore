@@ -1,35 +1,77 @@
 const router = require('express').Router();
 const { Jokes } = require('../../models');
-const validateUser = require('../../utils/auth');
 
-router.post('/', validateUser, async (req, res) => {
+router.get('/jokes', async (req, res) => {
   try {
-    const newJoke = await Jokes.create({
-      ...req.body,
-      user_id: req.session.user_id,
+    const jokeData = await Jokes.findAll({
+      include: [
+        {
+          model: Jokes,
+          attributes: ['jokes'],
+        },
+      ],
     });
 
-    res.status(200).json(newJoke);
+    const userJokes = jokeData.map((jokes) => jokes.get({ plain: true }));
+
+    res.render('login', {
+      userJokes,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/jokes/:id', async (req, res) => {
+  try {
+    const jokeData = await Jokes.findByPk(req.params.id, {
+      include: [
+        {
+          model: Jokes,
+          attributes: ['jokes'],
+        },
+      ],
+    });
+
+    const userJokes = await jokeData.get({ plain: true });
+
+    res.render('jokes', {
+      ...userJokes,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post('/jokes', async (req, res) => {
+  try {
+    const newJokes = await Jokes.create({
+      ...req.body,
+      user_id: req.session.jokes,
+    });
+
+    res.status(200).json(newJokes);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', validateUser, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
-    const jokeData = await Jokes.destroy({
+    const jokesData = await Jokes.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!jokeData) {
-      res.status(404).json({ message: 'No jokes were found with this id' });
+    if (!jokesData) {
+      res.status(404).json({ message: 'No jokes found with this id!' });
       return;
     }
 
-    res.status(200).json(jokeData);
+    res.status(200).json(jokesData);
   } catch (err) {
     res.status(500).json(err);
   }
