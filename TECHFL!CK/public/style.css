@@ -1,0 +1,60 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 25px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.6;
+  }
+  
+  .login {
+      display: flex;
+      padding-top: 50px;
+  }
+  
+  h1 {
+      display: flex;
+      justify-content: center;
+      padding-top: 8%;
+  }
+  
+  .container {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid grey;
+      border-radius: 5px;
+      margin: 0px 20%;
+  }
+  
+  .img {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  
+  .container {
+    padding: 16px;
+  }
+  
+  .psw {
+    display: flex;
+    padding-top: 20px;
+    margin: 0px 20%;
+  }
+  
