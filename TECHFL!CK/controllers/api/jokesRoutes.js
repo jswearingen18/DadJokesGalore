@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Jokes } = require('../../models');
 
-router.get('/jokes', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const jokeData = await Jokes.findAll({
       include: [
@@ -22,7 +22,7 @@ router.get('/jokes', async (req, res) => {
   }
 });
 
-router.get('/jokes/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const jokeData = await Jokes.findByPk(req.params.id, {
       include: [
