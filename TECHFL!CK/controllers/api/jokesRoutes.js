@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
   try {
     const newJokes = await Jokes.create({
       ...req.body,
-      user_id: req.session.jokes,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newJokes);
