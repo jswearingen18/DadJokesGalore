@@ -93,4 +93,39 @@ input[type=text], input[type=password] {
   .nav-menu li a {
     text-decoration: none;
   }
+
+  footer{
+    position: fixed;
+    font-variant: small-caps;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: teal;
+    height: auto;
+    width: 100vw;
+    padding-top: 10px;
+    color: white;
+  }
+  
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-content h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: cursive;
+  }
+  .footer-content p{
+    max-width: 300px;
+    margin: 10px auto;
+    font-size: 15px;
+    color: #cacdd2;
+  }
+  
   
