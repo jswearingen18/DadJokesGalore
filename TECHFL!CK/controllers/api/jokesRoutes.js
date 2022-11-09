@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
     const userJokes = jokeData.map((jokes) => jokes.get({ plain: true }));
 
-    res.render('login', {
+    res.render('homepage', {
       userJokes,
     });
   } catch (err) {
