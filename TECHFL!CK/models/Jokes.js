@@ -22,10 +22,6 @@ Jokes.init(
         key: 'id',
       },
     },
-    likes: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-    },
   },
   {
     sequelize,
