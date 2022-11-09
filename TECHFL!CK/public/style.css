@@ -7,7 +7,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
   
-  button {
+  .loginBtn {
     background-color: blue;
     border-radius: 5px;
     color: white;
@@ -18,7 +18,7 @@ input[type=text], input[type=password] {
     width: 100%;
   }
   
-  button:hover {
+  .loginBtn:hover {
     opacity: 0.6;
   }
   
@@ -27,7 +27,7 @@ input[type=text], input[type=password] {
       padding-top: 50px;
   }
   
-  h1 {
+  .loginh1 {
       display: flex;
       justify-content: center;
       padding-top: 8%;
@@ -61,37 +61,36 @@ input[type=text], input[type=password] {
     font-variant: small-caps;
     background-color: teal;
     color: white;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     color: white;
-}
-
-.dadLogo {
+  }
+  
+  .dadLogo {
     font-size: 35px;
     font-family: cursive;
-}
-
-.nav-menu {
+  }
+  
+  .nav-menu {
     display: flex;
     padding-right: 30px;
     font-size: 20px;
     font-family: fantasy papyrus;
-}
-
-.nav-menu li {
+  }
+  
+  .nav-menu li {
     padding: 5px 15px;
     list-style: none;
-}
-
-.nav-menu li:hover {
+  }
+  
+  .nav-menu li:hover {
     background-color: #4c9e9e;
     border-radius: 5px;
     transition: 0.3s ease;
-}
-
-.nav-menu li a {
+  }
+  
+  .nav-menu li a {
     text-decoration: none;
-}
-
+  }
   
