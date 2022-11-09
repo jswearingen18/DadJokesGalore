@@ -23,8 +23,7 @@ Jokes.init(
       },
     },
     likes: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
+      type: DataTypes.INTEGER
     },
   },
   {
