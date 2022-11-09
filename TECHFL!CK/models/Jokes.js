@@ -11,6 +11,11 @@ Jokes.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     jokes: {
       type: DataTypes.STRING,
       allowNull: false,

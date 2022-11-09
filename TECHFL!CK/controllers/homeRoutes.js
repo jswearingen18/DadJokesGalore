@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Jokes, User } = require('../../models');
-const validateUser = require('../../utils/auth');
+const { Jokes, User } = require('../models');
+const validateUser = require('../utils/auth');
 
 router.get('/', validateUser, async (req, res) => {
   try {
@@ -13,7 +13,7 @@ router.get('/', validateUser, async (req, res) => {
       ],
     });
 
-    const jokes = jokeData.map((jokes) => jokes.get({ plain: true }));
+    const jokes = jokeData.map((joke) => joke.get({ plain: true }));
 
     res.render('homepage', {
       jokes,
@@ -37,7 +37,7 @@ router.get('/jokes/:id', async (req, res) => {
 
     const joke = jokeData.get({ plain: true });
 
-    res.render('homepage', {
+    res.render('joke', {
       ...joke,
       logged_in: req.session.logged_in,
     });
@@ -66,11 +66,11 @@ router.get('/profile', validateUser, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('/profile');
     return;
   }
 
-  res.render('homepage');
+  res.render('login');
 });
 
 module.exports = router;

@@ -4,7 +4,9 @@
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Jokes</title>
-    <link rel='stylesheet' type='text/css' href='./style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/jass.css' />
+
   </head>
 
   <body>
@@ -24,12 +26,14 @@
     <main>
       {{{body}}}
     </main>
+    <footer>
+      <div class='footer-content'>
+        <h3>Dad Jokes Galore</h3>
+        <p>copyright &copy;2022 <a href='#'>Dad Jokes Galore</a> </p>
+      </div>
+    </footer>
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
   </body>
-  <footer>
-    <div class='footer-content'>
-      <h3>Dad Jokes Galore</h3>
-      <p>copyright &copy;2022 <a href='#'>Dad Jokes Galore</a> </p>
-    </div>
-  </footer>
-
 </html>
