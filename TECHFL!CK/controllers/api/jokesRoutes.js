@@ -44,7 +44,18 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/jokes', async (req, res) => {
+// router.put('/:id', async (req, res) => {
+//   try {
+//     const likesData = await Jokes.update({
+//       where: {
+//         // id: req.params.id,
+//         likes: + 1
+//       }
+//     })
+//   }
+// })
+
+router.post('/', async (req, res) => {
   try {
     const newJokes = await Jokes.create({
       ...req.body,
