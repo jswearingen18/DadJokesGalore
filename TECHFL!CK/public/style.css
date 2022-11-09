@@ -131,5 +131,53 @@ input[type=text], input[type=password] {
     font-size: 15px;
     color: #cacdd2;
   }
+
+  .cards {
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    display: flex;
+    padding: 50px;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: teal;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.card:hover .card-overlay {
+    transform: translateY(0);
+}
+
+.card-description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
   
   
