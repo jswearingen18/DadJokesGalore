@@ -3,7 +3,6 @@ const { User, Jokes } = require('../models');
 
 const userData = require('./userData.json');
 const jokesData = require('./jokesData.json');
-const likesData = require('./likesData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
