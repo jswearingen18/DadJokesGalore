@@ -73,6 +73,7 @@ router.delete('/:id', async (req, res) => {
     const jokesData = await Jokes.destroy({
       where: {
         id: req.params.id,
+        jokes: req.params.jokes,
         user_id: req.session.user_id,
       },
     });

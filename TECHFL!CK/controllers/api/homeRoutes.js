@@ -4,7 +4,7 @@ const validateUser = require('../utils/auth');
 
 router.get('/', validateUser, async (req, res) => {
   try {
-    const userData = await User.findall({
+    const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['name', 'ASC']],
     });
