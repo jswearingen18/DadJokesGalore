@@ -43,7 +43,7 @@ const signUp = async (event) => {
   }
 };
 
-document.querySelector('.login');
+document.querySelector('.login-page');
 document.addEventListener('submit', login);
 
 document.querySelector('.sign_up');

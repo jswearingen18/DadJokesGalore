@@ -1,10 +1,8 @@
-<div class='cards'>
-  <div class='card'>
-    <div class='container'>
-      <h4><b>Jokey joke joke</b></h4>
-    </div>
-    <div class='card-overlay'>
-      <p class='card-description'></p>
-    </div>
+{{#each jokes as |joke|}}
+  <div>
+    <p>-{{user.name}} posted this joke at {{date_created}}</p>
+    <p class='joke'>{{jokes}}</p>
+    <button class='like'>🤣</button>
+    <p></p>
   </div>
-</div>
+{{/each}}
