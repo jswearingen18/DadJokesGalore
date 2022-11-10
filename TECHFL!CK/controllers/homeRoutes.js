@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Jokes, User } = require('../models');
 const validateUser = require('../utils/auth');
 
-router.get('/', validateUser, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const jokeData = await Jokes.findAll({
       include: [

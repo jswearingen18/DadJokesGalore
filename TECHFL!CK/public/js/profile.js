@@ -6,14 +6,14 @@ const newJokeForm = async (event) => {
   if (joke) {
     const response = await fetch(`/api/jokes`, {
       method: 'POST',
-      body: JSON.stringify({ jokes }),
+      body: JSON.stringify({ joke }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.replace('/joke');
+      document.location.replace('/profile');
     } else {
       alert('Error with Joke');
     }
