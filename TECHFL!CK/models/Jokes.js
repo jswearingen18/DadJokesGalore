@@ -28,7 +28,7 @@ Jokes.init(
       },
     },
     likes: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER
     },
   },
   {
