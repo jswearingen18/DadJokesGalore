@@ -1,3 +1,23 @@
+
+{{!-- {{#each jokes as |joke|}} --}}
+  <div class="cards">
+    {{#each jokes as |joke|}}
+    <div class="card">
+            <div class="card-container">
+                <p>{{jokes}}</p>
+            </div>
+            <div class="card-overlay">
+                <button type="button" class ="like" onclick="likeButton({{joke.id}},{{joke.likes}})">🤣</button>
+                <p id="likes" data-likes={{joke.likes}} data-jokeId={{joke.id}}>{{joke.likes}}</p>
+                <p class="card-description">-{{user.name}} posted this joke at {{date_created}}</p>
+            </div>
+        </div>
+    {{!-- <p>-{{user.name}} posted this joke at {{date_created}}</p>
+    <p class='card-container'>{{jokes}}</p>
+    <button class='like'>🤣</button>
+    <p></p>
+  </div> --}}
+
 <div class='cards'>
   {{#each jokes as |joke|}}
     <div class='card'>
@@ -5,12 +25,17 @@
         <p>{{jokes}}</p>
       </div>
       <div class='card-overlay'>
+
         <button id='like-button'>🤣</button>
+
+        <button class='like'>🤣</button>
+
         <p class='card-description'>-{{user.name}}
           posted this joke at
           {{format_date date_created}}</p>
       </div>
     </div>
+
   {{/each}}
 </div>
 <script src='/js/likeplus.js'></script>
