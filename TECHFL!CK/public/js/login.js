@@ -1,11 +1,9 @@
 const login = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').ariaValueMax.trim();
-  const password = document
-    .querySelector('#password-login')
-    .ariaValueMax.trim();
-
+  const email = document.querySelector('#userEmail').value;
+  const password = document.querySelector('#userPassword').value;
+  console.log(email);
   if (email && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
