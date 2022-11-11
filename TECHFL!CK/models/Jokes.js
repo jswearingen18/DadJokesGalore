@@ -30,6 +30,10 @@ Jokes.init(
     likes: {
       type: DataTypes.INTEGER
     },
+    // comment: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
   },
   {
     sequelize,
