@@ -50,7 +50,12 @@ router.get('/profile', validateUser, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Jokes }],
+      include: [
+        {
+          model: Jokes,
+          attributes: ['jokes'],
+        },
+      ],
     });
 
     const user = userData.get({ plain: true });
