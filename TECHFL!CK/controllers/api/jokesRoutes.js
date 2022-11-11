@@ -18,9 +18,10 @@ router.post('/', validateUser, async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const likesData = await Jokes.update({
+      ...req.params},{
       where: {
         id: req.params.id,
-        likes: + 1
+        
       }
     });
     res.status(200).json(likesData);

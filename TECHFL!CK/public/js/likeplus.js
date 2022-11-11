@@ -1,9 +1,9 @@
-const likeButton = document.getElementsByClassName("like");
-const likeCount = document.getElementById("likes");
-
-var count = 0;
-
-likeButton.addEventListener("click", () => {
-    count++;
-    likeCount.innerHTML = count;
-});
+async function likeButton(id,likes) {
+    const url = `api/jokes/${id}`
+    const body = {
+        likes:likes
+    }
+        const response = await fetch(url,{method:"PUT",body:JSON.stringify(body)});
+        const json = await JSON.stringify(response.json());
+        return json;
+}

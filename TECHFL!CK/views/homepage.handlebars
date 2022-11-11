@@ -6,7 +6,8 @@
                 <p>{{jokes}}</p>
             </div>
             <div class="card-overlay">
-                <button class='like'>🤣</button>
+                <button type="button" class ="like" onclick="likeButton({{joke.id}},{{joke.likes}})">🤣</button>
+                <p id="likes" data-likes={{joke.likes}} data-jokeId={{joke.id}}>{{joke.likes}}</p>
                 <p class="card-description">-{{user.name}} posted this joke at {{date_created}}</p>
             </div>
         </div>
