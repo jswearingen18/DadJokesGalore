@@ -1,4 +1,5 @@
 
+
 async function likeButton(id,likes) {
     const url = `api/jokes/${id}`
     const body = {
@@ -23,10 +24,16 @@ likeButton.addEventListener("click", () => {
 
 document.querySelector('.like-button').addEventListener('click', likeButton);
 
+
 var count = 0;
 
 const likeButton = () => {
-  console.log('Hello');
+  count++;
+  console.log(count);
 };
+
+
+document.querySelectors('like-button').addEventListener('click', likeButton);
+
 
 

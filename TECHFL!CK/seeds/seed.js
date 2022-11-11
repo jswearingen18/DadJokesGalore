@@ -15,7 +15,6 @@ const seedDatabase = async () => {
   for (const jokes of jokesData) {
     await Jokes.create({
       ...jokes,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
