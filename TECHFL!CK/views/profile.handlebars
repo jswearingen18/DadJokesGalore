@@ -1,15 +1,12 @@
-<h1>Hello, {{name}}</h1>
+<div class="profile-name">
+  <h1>Hello, {{name}}</h1>
+</div>
+<div class="cards">
 {{#each jokes as |joke|}}
-
-  <div class='cards'>
-    <div class='card'>
-      <div class='container'>
-
-        <h4>{{jokes}}</h4>
-      </div>
-      <div class='card-overlay'>
-        <p class='card-description'></p>
-      </div>
+  <div class="card">
+    <div class="card-container">
+      <p>{{jokes}}</p>
     </div>
   </div>
 {{/each}}
+</div>
