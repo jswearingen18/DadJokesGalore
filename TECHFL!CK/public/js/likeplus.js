@@ -1,9 +1,7 @@
-const likeButton = document.getElementsByClassName("like");
-const likeCount = document.getElementById("likes");
+document.querySelector('.like-button').addEventListener('click', likeButton);
 
 var count = 0;
 
-likeButton.addEventListener("click", () => {
-    count++;
-    likeCount.innerHTML = count;
-});
+const likeButton = () => {
+  console.log('Hello');
+};
