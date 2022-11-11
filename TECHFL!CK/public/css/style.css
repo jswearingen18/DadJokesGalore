@@ -136,10 +136,12 @@ input[type=text], input[type=password] {
   }
 
   .cards {
-    display: flex;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
     padding: 10px;
-    list-style-type: none;
+    column-gap: 10px;
+    justify-content: center;
+    /* list-style-type: none; */
 }
 
 .card {
@@ -147,7 +149,8 @@ input[type=text], input[type=password] {
     background-color: white;
     display: flex;
     padding: 50px;
-    height: 100%;
+    height: 200px;
+    width: 100%;
     overflow: hidden;
     text-decoration: none;
     border: 1px solid grey;
@@ -181,6 +184,10 @@ input[type=text], input[type=password] {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+}
+.card-container {
+  display: flex;
+  font: 12px cursive;
 }
   
   
