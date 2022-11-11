@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Jokes } = require('../../models');
 const validateUser = require('../../utils/auth');
 
-router.post('/', validateUser, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newJoke = await Jokes.create({
       ...req.body,
@@ -21,12 +21,17 @@ router.put('/:id', async (req, res) => {
       ...req.params},{
       where: {
         id: req.params.id,
+
+        likes: +1,
+      },
+
         
       }
+
     });
     res.status(200).json(likesData);
   } catch (err) {
-    res.status(400).json(err)
+    res.status(400).json(err);
   }
 });
 
