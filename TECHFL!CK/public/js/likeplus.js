@@ -1,7 +1,9 @@
-const { Jokes } = require('../../models');
+const likeButton = document.getElementsByClassName("like");
+const likeCount = document.getElementById("likes");
 
-document.querySelector('.like');
-const likes = req.session.likes;
-likes + 1;
+var count = 0;
 
-module.exports = router;
+likeButton.addEventListener("click", () => {
+    count++;
+    likeCount.innerHTML = count;
+});
