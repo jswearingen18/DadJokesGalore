@@ -12,11 +12,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const jokes of jokesData) {
-    await Jokes.create({
-      ...jokes,
-    });
-  }
+  const jokes = await Jokes.bulkCreate(jokesData, {
+    individualHooks: true,
+    returning: true,
+  });
 
   process.exit(0);
 };
