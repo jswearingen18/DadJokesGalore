@@ -15,23 +15,24 @@ router.post('/', async (req, res) => {
   }
 });
 
-// router.put('/:id', async (req, res) => {
-//   try {
-//     const likesData = await Jokes.update({
-//       ...req.params,
-//       where: {
-//         id: req.params.id,
-
-//         likes: +1,
-//       },
-//
-
-//     });
-//     res.status(200).json(likesData);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+router.put('/:id', async (req, res) => {
+  try {
+    const likesData = await Jokes.update(
+      {
+        // TODO: Retrieve the data  from the req.body
+        likes: +1,
+      },
+      {
+        where: {
+          likes: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(likesData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 router.delete('/:id', validateUser, async (req, res) => {
   try {
