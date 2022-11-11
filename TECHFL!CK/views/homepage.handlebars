@@ -5,7 +5,7 @@
         <p>{{jokes}}</p>
       </div>
       <div class='card-overlay'>
-        <button class='like-button'>🤣</button>
+        <button id='like-button'>🤣</button>
         <p class='card-description'>-{{user.name}}
           posted this joke at
           {{format_date date_created}}</p>
@@ -13,4 +13,4 @@
     </div>
   {{/each}}
 </div>
-<script src="/js/likeplus.js"></script>
+<script src='/js/likeplus.js'></script>
