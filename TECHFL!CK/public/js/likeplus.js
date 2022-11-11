@@ -1,3 +1,4 @@
+
 const likeButton = document.getElementsByClassName("like");
 const likeCount = document.getElementById("likes");
 debugger
@@ -8,3 +9,12 @@ likeButton.addEventListener("click", () => {
     likeCount.innerHTML = count;
     console.log("working");
 });
+
+document.querySelector('.like-button').addEventListener('click', likeButton);
+
+var count = 0;
+
+const likeButton = () => {
+  console.log('Hello');
+};
+
