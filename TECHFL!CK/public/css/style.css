@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+  }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 25px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .joke {
+    
+  }
+  .loginBtn {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .loginBtn:hover {
+    opacity: 0.6;
+  }
+  
+  .login {
+      display: flex;
+      padding-top: 50px;
+  }
+  
+  .loginh1 {
+      display: flex;
+      justify-content: center;
+      padding-top: 8%;
+  }
+  
+  .loginContainer {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid grey;
+      border-radius: 5px;
+      margin: 0px 20%;
+      padding: 16px;
+  }
+  
+  .loginImg {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  .psw {
+    display: flex;
+    padding-top: 20px;
+    margin: 0px 20%;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    font-variant: small-caps;
+    background-color: teal;
+    color: white;
+  }
+  
+  .nav-links a {
+    color: white;
+  }
+  
+  .dadLogo {
+    font-size: 35px;
+    font-family: cursive;
+  }
+  
+  .nav-menu {
+    display: flex;
+    padding-right: 30px;
+    font-size: 20px;
+    font-family: fantasy papyrus;
+  }
+  
+  .nav-menu li {
+    padding: 5px 15px;
+    list-style: none;
+  }
+  
+  .nav-menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+  }
+
+  footer{
+    position: fixed;
+    font-variant: small-caps;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: teal;
+    height: auto;
+    width: 100vw;
+    padding-top: 10px;
+    color: white;
+  }
+  
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-content h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: cursive;
+  }
+  .footer-content p{
+    max-width: 300px;
+    margin: 10px auto;
+    font-size: 15px;
+    color: #cacdd2;
+  }
+
+  .cards {
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    display: flex;
+    padding: 50px;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: teal;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.card:hover .card-overlay {
+    transform: translateY(0);
+}
+
+.card-description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+  
+  

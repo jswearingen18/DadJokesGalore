@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Jokes extends Model {}
 
@@ -11,6 +11,11 @@ Jokes.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     jokes: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -18,9 +23,12 @@ Jokes.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
-        key: "id",
+        model: 'user',
+        key: 'id',
       },
+    },
+    likes: {
+      type: DataTypes.INTEGER,
     },
   },
   {
@@ -28,7 +36,7 @@ Jokes.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "jokes",
+    modelName: 'jokes',
   }
 );
 

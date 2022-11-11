@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jokes</title>
-</head>
-<body>
-    
-</body>
-</html>
+{{#each jokes as |joke|}}
+  <div>
+    <p>-{{user.name}} posted this joke at {{date_created}}</p>
+    <p class='joke'>{{jokes}}</p>
+    <button class='like'>🤣</button>
+    <p></p>
+  </div>
+{{/each}}

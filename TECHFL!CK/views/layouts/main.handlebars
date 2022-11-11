@@ -1,14 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-</head>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Jokes</title>
+    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='/css/jass.css' />
 
-<body>
+  </head>
 
-</body>
-
+  <body>
+    <header>
+      <nav class='navbar'>
+        <div class='dadLogo'>Dad Jokes Galore</div>
+        <ul class='nav-links'>
+          <div class='nav-menu'>
+            <li class='Home'><a href='/'>Home</a></li>
+            <li class='submitJoke'><a href='/'>Submit A Joke</a></li>
+            <li class='profile'><a href='/'>Profile</a></li>
+            <li class='logIn'><a href='/'>Log In</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+    <footer>
+      <div class='footer-content'>
+        <h3>Dad Jokes Galore</h3>
+        <p>copyright &copy;2022 <a href='#'>Dad Jokes Galore</a> </p>
+      </div>
+    </footer>
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
 </html>
