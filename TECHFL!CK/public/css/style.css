@@ -189,5 +189,10 @@ input[type=text], input[type=password] {
   display: flex;
   font: 12px cursive;
 }
+
+.profile-name {
+  display: flex;
+  padding: 25px;
+}
   
   

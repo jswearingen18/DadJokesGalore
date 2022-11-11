@@ -1,20 +1,13 @@
-{{!-- {{#each jokes as |joke|}} --}}
-  <div class="cards">
-    {{#each jokes as |joke|}}
-    <div class="card">
-            <div class="card-container">
-                <p>{{jokes}}</p>
-            </div>
-            <div class="card-overlay">
-                <button class='like'>🤣</button>
-                <p class="card-description">-{{user.name}} posted this joke at {{date_created}}</p>
-            </div>
-        </div>
-    {{!-- <p>-{{user.name}} posted this joke at {{date_created}}</p>
-    <p class='card-container'>{{jokes}}</p>
-    <button class='like'>🤣</button>
-    <p></p>
-  </div> --}}
-  {{/each}}
+<div class="cards">
+  {{#each jokes as |joke|}}
+  <div class="card">
+    <div class="card-container">
+      <p>{{jokes}}</p>
+    </div>
+    <div class="card-overlay">
+      <button class='like'>🤣</button>
+      <p class="card-description">-{{user.name}} posted this joke at {{date_created}}</p>
+    </div>
   </div>
-{{!-- {{/each}} --}}
+  {{/each}}
+</div>
