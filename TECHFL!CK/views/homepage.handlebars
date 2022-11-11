@@ -1,3 +1,4 @@
+
 {{!-- {{#each jokes as |joke|}} --}}
   <div class="cards">
     {{#each jokes as |joke|}}
@@ -16,6 +17,21 @@
     <button class='like'>🤣</button>
     <p></p>
   </div> --}}
+
+<div class='cards'>
+  {{#each jokes as |joke|}}
+    <div class='card'>
+      <div class='card-container'>
+        <p>{{jokes}}</p>
+      </div>
+      <div class='card-overlay'>
+        <button class='like'>🤣</button>
+        <p class='card-description'>-{{user.name}}
+          posted this joke at
+          {{format_date date_created}}</p>
+      </div>
+    </div>
+
   {{/each}}
-  </div>
-{{!-- {{/each}} --}}
+</div>
+<script src="/js/likeplus.js"></script>
