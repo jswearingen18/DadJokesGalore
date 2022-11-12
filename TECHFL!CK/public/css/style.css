@@ -11,9 +11,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
   
-  .joke {
-    
-  }
   .loginBtn {
     background-color: blue;
     border-radius: 5px;
@@ -113,6 +110,7 @@ input[type=text], input[type=password] {
     padding-top: 10px;
     padding-bottom: 30px;
     color: white;
+    margin-top: 50px;
   }
   
   .footer-content{

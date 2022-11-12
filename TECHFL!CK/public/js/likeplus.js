@@ -48,7 +48,6 @@ var count = 0;
 
 const likeButton = () => {
   count++;
-  console.log(count);
 };
 
 document.addEventListener('click', function (event) {
@@ -62,4 +61,3 @@ document.addEventListener('click', function (event) {
     likeClick(jokeId, jokeLikes);
   }
 });
-// document.querySelector('.like-button').addEventListener('click', likeButton);
