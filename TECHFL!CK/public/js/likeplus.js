@@ -8,7 +8,7 @@ async function likeClick(id, likes) {
     method: 'PUT',
     body: JSON.stringify(body),
   });
-  const json = await JSON.stringify(response.json());
+  const json = await response.json();
   return json;
 }
 
