@@ -6,7 +6,6 @@ router.post('/', async (req, res) => {
   try {
     const newJoke = await Jokes.create({
       ...req.body,
-      user_id: req.session.user_id,
     });
 
     res.status(200).json(newJoke);
@@ -16,6 +15,7 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+  console.log('test: ', req.body);
   try {
     const likesData = await Jokes.update(
       {
@@ -24,10 +24,11 @@ router.put('/:id', async (req, res) => {
       },
       {
         where: {
-          likes: req.params.id,
+          id: req.params.id,
         },
       }
     );
+    console.log(likesData);
     res.status(200).json(likesData);
   } catch (err) {
     res.status(400).json(err);

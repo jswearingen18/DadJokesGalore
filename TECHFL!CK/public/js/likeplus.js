@@ -50,7 +50,7 @@ const likeButton = () => {
   count++;
 };
 
-document.addEventListener('click', function (event) {
+document.addEventListener('click', async function (event) {
   const target = event.target;
   const attributeValue = target.getAttribute('class');
 
@@ -58,6 +58,8 @@ document.addEventListener('click', function (event) {
     const jokeLikes = target.getAttribute('data-joke-like');
     const jokeId = target.getAttribute('data-joke-id');
     likeButton();
-    likeClick(jokeId, jokeLikes);
+    const newJoke = await likeClick(jokeId, jokeLikes);
+
+    console.log(newJoke);
   }
 });
