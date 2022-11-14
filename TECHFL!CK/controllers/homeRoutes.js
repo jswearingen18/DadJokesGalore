@@ -78,7 +78,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// router.get('/login', (req,res) => {
+// router.get('/createAccount', (req,res) => {
 //   if (req.session.)
 // })
 
