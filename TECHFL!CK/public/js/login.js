@@ -42,18 +42,25 @@ const signUp = async (event) => {
 };
 
 const createAcc = async () => {
-  document.location.replace('/createAccount');
+  // document.location.replace('/createAccount');
+  console.log('why?')
 
 }
 
 
-document.querySelector('.login-page');
-document.addEventListener('submit', login);
-// const loginBtn = document.querySelector('.loginBtn');
-// loginBtn.addEventListener('submit', login);
 
-// document.querySelector('.sign_up');
-// document.addEventListener('submit', signUp);
 
-document.querySelector('.createBtn');
-document.addEventListener('click', createAcc);
+const loginPage = document.querySelector('.login-page');
+loginPage.addEventListener('submit', login);
+
+document.querySelector('.createBtnForm').addEventListener('click', createAcc);
+
+// loginBtn.addEventListener('click', login);
+// createBtn.addEventListener('submit', createAcc);
+
+// document.querySelector('.createBtn');
+// document.addEventListener('submit', createAcc);
+
+
+document.querySelector('.sign_up');
+document.addEventListener('submit', signUp);
