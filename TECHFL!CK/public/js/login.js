@@ -42,6 +42,12 @@ const signUp = async (event) => {
   }
 };
 
+
+// const createAcc = async () => {
+//   document.location.replace('/createAccount');
+
+// }
+
 const createAcc = async (req,res) => {
   document.location.replace('/createAccount')
   console.log('working');
@@ -49,6 +55,10 @@ const createAcc = async (req,res) => {
 
 
 
+
+
+// document.querySelector('.login-page');
+// document.addEventListener('submit', createAcc);
 
 const loginPage = document.querySelector('.login-page');
 loginPage.addEventListener('submit', login);
@@ -64,3 +74,4 @@ document.querySelector('.createBtnForm').addEventListener('click', createAcc);
 
 document.querySelector('.sign_up');
 document.addEventListener('submit', signUp);
+

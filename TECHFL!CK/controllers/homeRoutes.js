@@ -78,9 +78,15 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+
+// router.get('/createAccount', (req,res) => {
+//   if (req.session.)
+// })
+
 router.get('/createAccount', (req,res) => {
   res.render('createAccount')
 })
+
 
 
 module.exports = router;
