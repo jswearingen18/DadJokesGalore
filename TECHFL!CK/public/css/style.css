@@ -1,6 +1,11 @@
 *{
     margin: 0;
   }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  } 
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -14,16 +19,61 @@ input[type=text], input[type=password] {
   html {
     height: 100%;
   }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
   body {
     height: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  }
+  p {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+  }
+  
+  ul,
+  ol,
+  dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    
+    text-decoration: none;
+  }
+  
+  a:hover {
+    
+    text-decoration: underline;
+  }
+  
+  label {
+    display: inline-block;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    margin: 0;
   }
 
   main {
     flex-grow: 1;
+    display: block;
   }
 
   header, main, footer {
@@ -31,7 +81,7 @@ input[type=text], input[type=password] {
   }
   
   .loginBtn {
-    background-color: blue;
+    background-color: teal;
     border-radius: 5px;
     color: white;
     padding: 14px 20px;
@@ -191,7 +241,6 @@ input[type=text], input[type=password] {
     position: absolute;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     bottom: 0;
     left: 0;
     right: 0;
@@ -217,6 +266,7 @@ input[type=text], input[type=password] {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+    font-size: 15px;
 }
 .card-container {
   display: flex;
@@ -229,11 +279,21 @@ input[type=text], input[type=password] {
 }
   
 .like-button {
-  margin-right: 15px;
-  padding: 5px;
-  margin-left: 15px;
+  margin-right: 7px;
+  padding: 10px 10px;
+  margin-left: 7px;
 }
 
-.like:hover {
+.like-button:hover {
+  cursor: pointer;
+}
+
+.dislike-button {
+  margin-right: 7px;
+  padding: 10px 10px;
+  margin-left: 7px;
+}
+
+.dislike-button:hover {
   cursor: pointer;
 }
