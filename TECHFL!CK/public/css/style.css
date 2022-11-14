@@ -16,6 +16,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
 
+
   html {
     height: 100%;
   }
@@ -107,7 +108,12 @@ input[type=text], input[type=password] {
       justify-content: center;
       padding-top: 8%;
   }
-  
+  .createH1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 8%;
+    margin-bottom: 40px;
+}
   .loginContainer {
       display: block;
       justify-content: center;
@@ -147,9 +153,22 @@ input[type=text], input[type=password] {
     width: 100%;
   }
 
+  .createBtn{
+    font-size: 1.5vw;
+  }
+
+
   .createBtn:hover {
     opacity: 0.6;
   }
+
+  @media only screen and (max-width: 1200px) {
+    .createBtn{
+      margin-top: 300px;
+      font-size: 2.5vw;
+    }
+  }
+
   .navbar {
     display: flex;
     align-items: center;
@@ -331,9 +350,9 @@ form {
 
 .profile-name {
   display: flex;
-  padding: 25px;
+  padding: 2.5vw;
 }
-  
+
 .like-button {
   margin-right: 7px;
   padding: 10px 10px;
