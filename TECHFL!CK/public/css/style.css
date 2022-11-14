@@ -249,8 +249,15 @@ input[type=text], input[type=password] {
     border: 1px solid grey;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
 }
 
+
+form {
+  display: block;
+  width: 100%;
+  margin: 0.625rem 0;
+}
 
 .card-overlay {
     position: absolute;
@@ -286,6 +293,8 @@ input[type=text], input[type=password] {
 .card-container {
   display: flex;
   font: 12px cursive;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .profile-name {
