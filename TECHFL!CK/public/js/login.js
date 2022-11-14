@@ -1,3 +1,4 @@
+
 const login = async (event) => {
   event.preventDefault();
 
@@ -41,10 +42,9 @@ const signUp = async (event) => {
   }
 };
 
-const createAcc = async () => {
-  // document.location.replace('/createAccount');
-  console.log('why?')
-
+const createAcc = async (req,res) => {
+  document.location.replace('/createAccount')
+  console.log('working');
 }
 
 
