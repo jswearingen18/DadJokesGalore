@@ -59,7 +59,7 @@ document.addEventListener('click', async function (event) {
     const jokeId = target.getAttribute('data-joke-id');
     likeButton();
     const newJoke = await likeClick(jokeId, jokeLikes);
-
+    window.location.replace('http://localhost:5544/');
     console.log(newJoke);
   }
 });

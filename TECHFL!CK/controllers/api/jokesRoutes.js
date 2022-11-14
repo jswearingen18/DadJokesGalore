@@ -22,6 +22,7 @@ router.put('/:id', async (req, res) => {
         // TODO: Retrieve the data  from the req.body
         likes: 1,
       },
+     
       {
         where: {
           id: req.params.id,
