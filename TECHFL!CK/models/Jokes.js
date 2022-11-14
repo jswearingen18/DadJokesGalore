@@ -30,6 +30,9 @@ Jokes.init(
     likes: {
       type: DataTypes.INTEGER
     },
+    dislikes: {
+      type: DataTypes.INTEGER
+    },
     // comment: {
     //   type: DataTypes.STRING,
     //   allowNull: false,

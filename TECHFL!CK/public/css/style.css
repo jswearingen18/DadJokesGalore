@@ -135,6 +135,21 @@ input[type=text], input[type=password] {
     padding-top: 20px;
     margin: 0px 20%;
   }
+
+  .createBtn {
+    background-color: gray;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .createBtn:hover {
+    opacity: 0.6;
+  }
   .navbar {
     display: flex;
     align-items: center;
