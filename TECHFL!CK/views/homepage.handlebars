@@ -29,11 +29,19 @@
           class='like-button'
           data-joke-id='{{id}}'
           data-joke-like='{{likes}}'
-        >🤣{{likes}}</button>
+        >🤣{{likes}}
+        </button>
 
         <p class='card-description'>-{{user.name}}
-          posted this joke at
-          {{format_date date_created}}</p>
+          posted this joke on
+          {{format_date date_created}}
+        </p>
+        <button
+          class='dislike-button'
+          data-joke-id='{{id}}'
+          data-joke-like='{{likes}}'
+        >☹️{{likes}}
+        </button>
       </div>
     </div>
 
