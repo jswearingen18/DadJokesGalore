@@ -1,12 +1,12 @@
-# TECHFL!CK
+# Dad Jokes Galore
 
 ## Description
 
-Social media platform for tech developers will allow you to create an account . Through this account you can upload media based around software development or tech you have created and be able to get a platform for ideas you have ame up with or as a learning path to help those with software development
+Platform for dad jokes where you can like jokes that people have posted. Utilizes mysql and sequelize to put and post jokes into a database. This database can have likes inserted into it and remains updated through this. 
 
 ## Github URL link
 
-Not live yet
+Ran through express has a server side 
 
 ## Github Repository link
 
@@ -15,18 +15,18 @@ https://github.com/jswearingen18/TECHFL-CK
 ## Badges
 
 ## Visuals
+![Screenshot (4)](https://user-images.githubusercontent.com/109003414/201713363-9e158f86-985f-4a21-a765-34835ee04066.png)
 
 ## Usage
 
-To be able to get software and tech out into the world and create a platform for those building and designing tech
-
+To be able to share jokes with the world and allow people to like those jokes. Will allow people to post jokes into their profile which in turn displays them all on the home page with who posted them in the data card. 
 ## Support
 
 Github
 
 ## Roadmap
 
-To start with we need to create a user DB this will allow log in and log out features as well as a profile page for people to have and view what they have uploaded so far. These will go to a database shared amongst other users and on this page people can share contributions feedback or give overall recognitions.
+To add a dislike button for the jokes implemeented through sequelize models. Also to allow users to add a pixel art profile image through a preselected selection run through a drop down menu that will allow them to select for their profile. 
 
 ## Contributions
 
