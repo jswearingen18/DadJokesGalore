@@ -8,11 +8,12 @@ async function likeClick(id, likes) {
   const response = await fetch(url, {
     method: 'PUT',
     body: JSON.stringify(body),
-    headers: { 'Content-Type': 'application/json' },
-
+    headers: {
+      "Content-type": "application/json"
+    }
   });
-  const json = await response.json();
-  return json;
+  const likesData = await response.json();
+  return likesData;
 }
 
 async function dislikeClick(id, dislikes) {
@@ -25,21 +26,24 @@ async function dislikeClick(id, dislikes) {
   const response = await fetch(url, {
     method: 'PUT',
     body: JSON.stringify(body),
-    headers: { 'Content-Type': 'application/json' },
-
+    headers: {
+      "Content-type": "application/json"
+    }
   });
-  const json = await response.json();
-  return json;
+  const dislikesData = await response.json();
+  console.log(dislikesData)
+  return dislikesData;
 }
 
 var count = 0;
+var discount = 0;
 
 const likeButton = () => {
-  count++;
+count++;
 };
 
 const dislikeButton = () => {
-  count++;
+  discount++;
 };
 
 document.addEventListener('click', async function (event) {
@@ -50,15 +54,15 @@ document.addEventListener('click', async function (event) {
     const jokeLikes = target.getAttribute('data-joke-like');
     const jokeId = target.getAttribute('data-joke-id');
     likeButton();
-
     const newLike= await likeClick(jokeId, jokeLikes);
     //window.location.replace('http://localhost:5544/');
     console.log(newLike);
   } else if (attributeValue === 'dislike-button') {
-    const jokedisLikes = target.getAttribute('data-joke-dislike');
+    const jokedisLikes = target.getAttribute('data-joke-dislikes');
     const jokeId = target.getAttribute('data-joke-id');
     dislikeButton();
     const newDislike = await dislikeClick(jokeId, jokedisLikes);
+    console.log(newDislike);
     //window.location.replace('http://localhost:5544/');
   }
 });
