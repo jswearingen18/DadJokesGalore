@@ -352,6 +352,7 @@ form {
     -webkit-line-clamp: 3;
     overflow: hidden;
     font-size: 15px;
+    margin-left: 15px;
 }
 .card-container {
   display: flex;
