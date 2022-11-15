@@ -12,41 +12,27 @@ async function likeClick(id, likes) {
   return json;
 }
 
-//  const likeButton = document.getElementsByClassName("like");
-
-// async function likeButton(id,likes) {
-//     const url = `api/jokes/${id}`
-//     const body = {
-//         likes:likes
-//     }
-//         const response = await fetch(url,{method:"PUT",body:JSON.stringify(body)});
-//         const json = await JSON.stringify(response.json());
-//         return json;
-// }
-
-// const likeButton = document.getElementsByClassName("like");
-
-// const likeCount = document.getElementById("likes");
-// debugger
-// var count = 0;
-
-//  likeButton.addEventListener("click", () => {
-//      count++;
-//     likeCount.innerHTML = count;
-//     console.log("working");
-//  });
-
-//  document.querySelector('.like-button').addEventListener('click', likeButton);
-
-//  var count = 0;
-
-//  const likeButton = () => {
-//    console.log('Hello');
-//  };
+async function dislikeClick(id, dislikes) {
+  const url = `api/jokes/${id}`;
+  const body = {
+    dislikes,
+    id,
+  };
+  const response = await fetch(url, {
+    method: 'PUT',
+    body: JSON.stringify(body),
+  });
+  const json = await response.json();
+  return json;
+}
 
 var count = 0;
 
 const likeButton = () => {
+  count++;
+};
+
+const dislikeButton = () => {
   count++;
 };
 
@@ -58,9 +44,14 @@ document.addEventListener('click', async function (event) {
     const jokeLikes = target.getAttribute('data-joke-like');
     const jokeId = target.getAttribute('data-joke-id');
     likeButton();
-    const newJoke = await likeClick(jokeId, jokeLikes);
-    debugger;
+    const newLike= await likeClick(jokeId, jokeLikes);
     window.location.replace('http://localhost:5544/');
-    console.log(newJoke);
+    console.log(newLike);
+  } else if (attributeValue === 'dislike-button') {
+    const jokedisLikes = target.getAttribute('data-joke-dislike');
+    const jokeId = target.getAttribute('data-joke-id');
+    dislikeButton();
+    const newDislike = await dislikeClick(jokeId, jokedisLikes);
+    window.location.replace('http://localhost:5544/');
   }
 });
