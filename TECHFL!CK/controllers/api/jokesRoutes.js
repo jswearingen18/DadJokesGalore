@@ -19,9 +19,9 @@ router.post('/', validateUser, async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   console.log('test: ', req.body);
-  const action = jokes.likes;
-  console.log(jokes.likes)
-  if (req.params.action === likes)
+  // const action = jokes.likes;
+  // console.log(jokes.likes)
+  //if (req.params.action === likes)
   try {
     const likesData = await Jokes.increment(
       {
