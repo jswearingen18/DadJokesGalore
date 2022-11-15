@@ -19,12 +19,22 @@ router.post('/', validateUser, async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+
+  console.log('test line 23:', req.body);
+  //if (req.params.action === likes)
+  try {
+    const likesData = await Jokes.increment(
+      {
+        // TODO: Retrieve the data  from the req.body
+       likes: 1,
+
   console.log("line 22", req.body);
   // if (action === 'likes') {
   try {
     const likesData = await Jokes.increment(
       {
         likes: 1,
+
       },
       {
         where: {
