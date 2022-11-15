@@ -1,14 +1,15 @@
 const newJokeForm = async (event) => {
   event.preventDefault();
 
-  const joke = document.querySelector('#joke').value.trim();
+  const jokes = document.querySelector('#jokes').value.trim();
 
-  if (joke) {
+  if (jokes) {
     const response = await fetch(`/api/jokes`, {
       method: 'POST',
-      body: JSON.stringify({ joke }),
+      body: JSON.stringify({ jokes }),
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
     });
 
@@ -36,7 +37,7 @@ const deleteJoke = async (event) => {
   }
 };
 
-document.querySelector('.newJokeForm');
+document.querySelector('#submitJoke');
 document.addEventListener('submit', newJokeForm);
 
 document.querySelector('.jokesList');

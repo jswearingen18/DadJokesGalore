@@ -1,11 +1,14 @@
 const router = require('express').Router();
-const { Jokes } = require('../../models');
+const { Jokes, User } = require('../../models');
 const validateUser = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+router.post('/', validateUser, async (req, res) => {
   try {
     const newJoke = await Jokes.create({
       ...req.body,
+      user_id: req.session.user_id,
+      likes: req.body.likes,
+      dislikes: req.body.dislikes
     });
 
     res.status(200).json(newJoke);
