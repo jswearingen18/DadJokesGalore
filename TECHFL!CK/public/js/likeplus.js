@@ -44,6 +44,7 @@ document.addEventListener('click', async function (event) {
     const jokeLikes = target.getAttribute('data-joke-like');
     const jokeId = target.getAttribute('data-joke-id');
     likeButton();
+
     const newLike= await likeClick(jokeId, jokeLikes);
     window.location.replace('http://localhost:5544/');
     console.log(newLike);
