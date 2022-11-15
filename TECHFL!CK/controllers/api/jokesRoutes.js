@@ -7,8 +7,8 @@ router.post('/', validateUser, async (req, res) => {
     const newJoke = await Jokes.create({
       ...req.body,
       user_id: req.session.user_id,
-      likes: req.body.likes,
-      dislikes: req.body.dislikes
+      likes: 0,
+      dislikes: 0
     });
 
     res.status(200).json(newJoke);
