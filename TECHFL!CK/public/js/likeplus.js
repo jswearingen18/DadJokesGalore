@@ -8,6 +8,9 @@ async function likeClick(id, likes) {
   const response = await fetch(url, {
     method: 'PUT',
     body: JSON.stringify(body),
+    headers: {
+      "Content-type": "application/json"
+    }
   });
   const likesData = await response.json();
   return likesData;
@@ -23,6 +26,9 @@ async function dislikeClick(id, dislikes) {
   const response = await fetch(url, {
     method: 'PUT',
     body: JSON.stringify(body),
+    headers: {
+      "Content-type": "application/json"
+    }
   });
   const dislikesData = await response.json();
   console.log(dislikesData)

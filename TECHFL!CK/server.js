@@ -30,7 +30,7 @@ const sessions = {
 
 app.use(session(sessions));
 
-app.use(express.json({}));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.engine('handlebars', hbs.engine);
