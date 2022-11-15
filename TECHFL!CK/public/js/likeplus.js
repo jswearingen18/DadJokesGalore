@@ -55,7 +55,7 @@ document.addEventListener('click', async function (event) {
     const jokeId = target.getAttribute('data-joke-id');
     likeButton();
     const newLike= await likeClick(jokeId, jokeLikes);
-    //window.location.replace('http://localhost:5544/');
+    window.location.replace('http://localhost:5544/');
     console.log(newLike);
   } else if (attributeValue === 'dislike-button') {
     const jokedisLikes = target.getAttribute('data-joke-dislikes');
@@ -63,6 +63,6 @@ document.addEventListener('click', async function (event) {
     dislikeButton();
     const newDislike = await dislikeClick(jokeId, jokedisLikes);
     console.log(newDislike);
-    //window.location.replace('http://localhost:5544/');
+    window.location.replace('http://localhost:5544/');
   }
 });

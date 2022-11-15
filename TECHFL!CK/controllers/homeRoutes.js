@@ -11,6 +11,9 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
+      order: [
+        ['date_created', 'DESC'],
+      ]
     });
 
     const jokes = jokeData.map((joke) => joke.get({ plain: true }));
