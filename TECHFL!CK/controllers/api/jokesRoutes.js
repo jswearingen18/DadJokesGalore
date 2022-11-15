@@ -29,7 +29,7 @@ router.put('/:id', async (req, res) => {
        likes: 1,
 
   console.log("line 22", req.body);
-  // if (action === 'likes') {
+  if (req.body.action === 'likes') {
   try {
     const likesData = await Jokes.increment(
       {
@@ -46,26 +46,25 @@ router.put('/:id', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-});
-// } else if (action === 'dislikes') {
-//     try {
-//       const dislikesData = await Jokes.increment(
-//         {
-//           dislikes: 1,
-//         },
-//         {
-//           where: {
-//             id: req.params.id,
-//           },
-//         }
-//       );
-//       console.log(dislikesData);
-//       res.status(200).json(likesData);
-//     } catch (err) {
-//       res.status(400).json(err);
-//     }
-//   }
-//   });
+} else if (req.body.action === 'dislikes') {
+    try {
+      const dislikesData = await Jokes.increment(
+        {
+          dislikes: 1,
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      );
+      console.log(dislikesData);
+      res.status(200).json(dislikesData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  }
+  });
 
 router.delete('/:id', validateUser, async (req, res) => {
   try {
