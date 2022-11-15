@@ -307,12 +307,32 @@ input[type=text], input[type=password] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin-bottom: 1rem;
 }
+
 @media only screen and (max-width: 1250px) {
   .cards {
-  display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
   }
   .card{
-    height: 150px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .card{
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
+  .card{
+    height: 200px;
   }
 }
 
@@ -334,25 +354,42 @@ form {
     background-color: teal;
     transform: translateY(100%);
     transition: .2s ease-in-out;
+    /* height: 150px; */
 }
+
 
 .card:hover .card-overlay {
     transform: translateY(0);
 }
 
 .card-description {
-    padding: 15px;
-    margin: 0;
+    padding: 5px;
     float: right;
     color: white;
-    font-size: 18px;
+    font-size: 80%;
     font-family: "MockFlowFont";
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    overflow: hidden;
-    font-size: 15px;
+    /* overflow: hidden; */
+    height: 100px;
+    width: 90px;   
 }
+
+@media only screen and (max-width: 700px) {
+  .card-description {
+    height:75px;
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card-description {
+    height:50px;
+    font-size: 60%;
+  }
+}
+
+
 .card-container {
   display: flex;
   font: 12px cursive;
@@ -366,7 +403,7 @@ form {
 }
 
 .like-button {
-  margin-right: 7px;
+  margin-right: 30px;
   padding: 10px 10px;
   margin-left: 7px;
 }
@@ -376,21 +413,47 @@ form {
 }
 
 .dislike-button {
-  margin-right: 7px;
+  /* margin-right: 7px; */
   padding: 10px 10px;
-  margin-left: 7px;
+  margin-left: 22.5%;
 }
+@media only screen and (max-width: 1250px) {
+  .dislike-button{
+    margin-left: 35.5%;
+    margin-right: 8px;
+
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .dislike-button{
+    margin-left: 22.5%;
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .dislike-button{
+    margin-left: 20.5%;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .dislike-button{
+    margin-left: 36.5%;
+    margin-right: 12px;
+  }
+}
+
 
 .dislike-button:hover {
   cursor: pointer;
 }
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .dislike-button{
     margin-left: 60%;
   }
-  .card-description{
+  /* .card-description{
     font-size: 1.5vw;
     margin-left: -10px;
     margin-bottom: 5px;
-  }
-}
+  } */
+} */
