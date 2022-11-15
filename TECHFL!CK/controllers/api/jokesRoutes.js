@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Jokes, User } = require('../../models');
 const validateUser = require('../../utils/auth');
 
+
 router.post('/', validateUser, async (req, res) => {
   try {
     const newJoke = await Jokes.create({
@@ -18,6 +19,7 @@ router.post('/', validateUser, async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+
   console.log('test line 23:', req.body);
   //if (req.params.action === likes)
   try {
@@ -25,6 +27,14 @@ router.put('/:id', async (req, res) => {
       {
         // TODO: Retrieve the data  from the req.body
        likes: 1,
+
+  console.log("line 22", req.body);
+  // if (action === 'likes') {
+  try {
+    const likesData = await Jokes.increment(
+      {
+        likes: 1,
+
       },
       {
         where: {
@@ -32,12 +42,30 @@ router.put('/:id', async (req, res) => {
         },
       }
     );
-    console.log(likesData);
     res.status(200).json(likesData);
   } catch (err) {
     res.status(400).json(err);
   }
 });
+// } else if (action === 'dislikes') {
+//     try {
+//       const dislikesData = await Jokes.increment(
+//         {
+//           dislikes: 1,
+//         },
+//         {
+//           where: {
+//             id: req.params.id,
+//           },
+//         }
+//       );
+//       console.log(dislikesData);
+//       res.status(200).json(likesData);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   }
+//   });
 
 router.delete('/:id', validateUser, async (req, res) => {
   try {
