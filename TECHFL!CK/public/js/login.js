@@ -23,17 +23,23 @@ const login = async (event) => {
 const signUp = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#name-signup').ariaValueMax.trim();
+  const name = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
   if (name && email && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+         name,
+          email, 
+          password })
     });
-
+console.log(response)
     if (response.ok) {
       document.location.replace('/profile');
     } else {
@@ -43,34 +49,12 @@ const signUp = async (event) => {
 };
 
 
-// const createAcc = async () => {
-//   document.location.replace('/createAccount');
-
-// }
-
 const createAcc = async (req,res) => {
   document.location.replace('/createAccount')
   console.log('working');
 }
-
-
-
-
-
-// document.querySelector('.login-page');
-// document.addEventListener('submit', createAcc);
-
-const loginPage = document.querySelector('.login-page');
-loginPage.addEventListener('submit', login);
-
-document.querySelector('.createBtnForm').addEventListener('click', createAcc);
-
-// loginBtn.addEventListener('click', login);
-// createBtn.addEventListener('submit', createAcc);
-
-// document.querySelector('.createBtn');
-// document.addEventListener('submit', createAcc);
-
+document.querySelector('.login-page');
+document.addEventListener('submit', login);
 
 document.querySelector('.sign_up');
 document.addEventListener('submit', signUp);
