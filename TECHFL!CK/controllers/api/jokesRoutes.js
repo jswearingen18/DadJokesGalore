@@ -17,12 +17,12 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   console.log('test: ', req.body);
   try {
+   // if (req.params.action === likes)
     const likesData = await Jokes.increment(
       {
         // TODO: Retrieve the data  from the req.body
         likes: 1,
       },
-     
       {
         where: {
           id: req.params.id,
