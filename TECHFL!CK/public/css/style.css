@@ -91,7 +91,9 @@ input[type=text], input[type=password] {
     cursor: pointer;
     width: 100%;
   }
-  
+  .logOut {
+    cursor: pointer;
+  }
   .loginBtn:hover {
     opacity: 0.6;
   }
