@@ -18,14 +18,12 @@ router.post('/', validateUser, async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-  console.log('test: ', req.body);
-  const action = jokes.likes;
-  console.log(jokes.likes)
-  if (req.params.action === likes)
+  const actions = req.params;
+  console.log("line 22", actions);
+   if (actions === 'likes') {
   try {
     const likesData = await Jokes.increment(
       {
-        // TODO: Retrieve the data  from the req.body
         likes: 1,
       },
       {
@@ -39,7 +37,25 @@ router.put('/:id', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-});
+} else if (actions === 'dislikes') {
+    try {
+      const likesData = await Jokes.increment(
+        {
+          dislikes: 1,
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      );
+      console.log(likesData);
+      res.status(200).json(likesData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  }
+  });
 
 router.delete('/:id', validateUser, async (req, res) => {
   try {
