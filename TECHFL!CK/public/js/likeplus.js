@@ -9,8 +9,8 @@ async function likeClick(id, likes) {
     method: 'PUT',
     body: JSON.stringify(body),
   });
-  const json = await response.json();
-  return json;
+  const likesData = await response.json();
+  return likesData;
 }
 
 async function dislikeClick(id, dislikes) {
@@ -24,8 +24,9 @@ async function dislikeClick(id, dislikes) {
     method: 'PUT',
     body: JSON.stringify(body),
   });
-  const json = await response.json();
-  return json;
+  const dislikesData = await response.json();
+  console.log(dislikesData)
+  return dislikesData;
 }
 
 var count = 0;
